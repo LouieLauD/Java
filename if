@@ -1,0 +1,80 @@
+class DemoIf 
+{
+	public static void main(String[] args) 
+	{
+		/*
+		1,
+		*/
+		int score = 60;
+		if(score >= 90){
+			System.out.println("A");
+		}else if(score >= 80 && score < 90){
+			System.out.println("B");
+		}else if(score >= 70 && score < 80){
+			System.out.println("C");
+		}else if(score >= 60 && score < 70){
+			System.out.println("D");
+		}else{
+			System.out.println("E");
+		}
+
+		System.out.println("-------------------");
+
+		/*
+		2
+		*/
+		int a = 5;
+		
+		if(++a <=5){ //a==6 false
+			System.out.println(a++); 
+		}else if(a-- > 5){		// 6>5; 6--; a==5;
+			System.out.println(a--);//打印5;  a==4;
+		}else {
+			System.out.println(a);
+		}
+
+		// a==4;
+		if(--a==3){	// a==3
+			if(a > 0){
+				System.out.println(a *= 2);//a==6
+
+			}else{
+				System.out.println(a %= 2);
+			}
+			System.out.println(a);//a==6
+		}
+
+		//3.
+		int age = 25;
+		char sex = '男';
+		if(sex == '男'){
+			if(age>=20 && age <=40){
+				System.out.println("可以录取");
+			}else if(age>=40 && age <=50){
+				System.out.println("考虑录取");
+			}else{
+				System.out.println("不录取");
+			}
+		}else if(sex == '女'){
+			if((age>=20 && age <=25) || (age>=30 && age<=40)){
+				System.out.println("可以录取");
+			}else if(age>25 && age <30){
+				System.out.println("考虑录取");
+			}else{
+				System.out.println("不录取");
+			}
+		}
+		
+		//4
+		//1.申请空间存储年龄，判断此人是否闰年出生，是则打印Y，否则打印N
+		//闰年规则：年份能整除4并且不能整除100，或者能整除400的是闰年
+		int age2 = 17;
+		int year = 2017;
+		year -= age2;
+		if(year%4==0 && year%100!=0 || year%400==0 ){
+			System.out.println("Y");
+		}else{
+			System.out.println("N");
+		}
+	}
+}
